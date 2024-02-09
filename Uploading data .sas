@@ -9,6 +9,7 @@ data example1;
 	input age name $ hobby $;
 
 * Step 4. Insert the actual data using datalines. In stead of typing datalines, you can use either lines or cards.;
+*Remember to insert semicolons after the datalines and after the last observation input.;
 datalines;
 A=Age B=Name C=Hobby
 25,joe,hoCkey
@@ -26,10 +27,14 @@ run;
 * external file;
 * using proc import;
 
-proc import out=example3
+*Step 1. Name your output/dataset using 'out=';
 *Step 2.State the location of your folder using datafile; 
-datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\L4.txt" 
-replace /*dbms=excel*/;
+*Step 3. If the data is an excel file specify that using database_management_system (dbms) = excel. 
+*In this case the file is text file which is the default thus the replace statement can be ignored;
+**NB**
+*These three steps MUST be written without a semicolon between them i.e. as one line of code. The colon only comes after replace ;
+
+proc import out=example3 datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\L4.txt" replace /*dbms=excel*/;
 *Step 3.State the delimiter i.e tab, space, comma..etc. 
 DELIMITER=",";
 *Step 4. Tell SAS to get column names;
