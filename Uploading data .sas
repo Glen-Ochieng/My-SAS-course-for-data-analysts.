@@ -56,7 +56,7 @@ run;
 * Specify the physical location to store the dataset, quoted between the double quotation marks;
 * The dataset file is stored in the extention of sas7bdat;
 
-*Step 1. Write the data statement followed by the location of your dataset folder on your PC in double quotation marks;
+*Step 1. Write the data statement followed by the location of you want your dataset stored on your PC in double quotation marks;
 data "G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\test";
 	set sashelp.humid;
 run;
