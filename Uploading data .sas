@@ -15,11 +15,6 @@ run;
 
 
 
-
-
-
-
-
 * external file;
 * using proc import;
 proc import out=example3 datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\L4.txt" replace /*dbms=excel*/;
