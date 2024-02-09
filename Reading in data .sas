@@ -51,7 +51,7 @@ data lecture4;
 	set sashelp.heart;
 run;
 
-*Now, a dataset named lecture4 has been created containing the data from sashelp.heart;
+*Now, a dataset named lecture4 has been created containing the data from sashelp.heart located in the work library.;
 *---------------------------------------------------------------------------------------------------------------------------------------;
 
 * Create permanent dataset;
