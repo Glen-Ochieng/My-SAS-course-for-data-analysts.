@@ -55,10 +55,10 @@ run;
 *---------------------------------------------------------------------------------------------------------------------------------------;
 
 * Create permanent dataset;
-* Specify the physical location to store the dataset, quoted between the double quotation marks;
-* The dataset file is stored in the extention of sas7bdat;
+*First, of all you have to create a folder you wish to save you dataset into in SAS Studio.;
+* Specify the folder, quoted between the double quotation marks;
+* The dataset file is stored in the extention of sas7bdat. i.e it will be automatically named the foldername.sas7bdat;
 
-*Step 1. Write the data statement followed by the location of you want your dataset stored on your PC in double quotation marks;
-data "G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\test";
+data "/home/u62564782/udemy Lecture 4";
 	set sashelp.humid;
 run;
