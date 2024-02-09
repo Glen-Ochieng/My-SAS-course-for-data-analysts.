@@ -44,12 +44,14 @@ run;
 
 *---------------------------------------------------------------------------------------------------------------------------------------;
 * To read in data from an existing dataset, use SET statement;
-*Step 1. Call your existing dataset using data;
+*Step 1. Name the dataset using data;
 *Step 2. After the set statement write the location of the new dataset you want to add in;
 *Run;
 data lecture4;
 	set sashelp.heart;
 run;
+
+*Now, a dataset named lecture4 has been created containing the data from sashelp.heart;
 *---------------------------------------------------------------------------------------------------------------------------------------;
 
 * Create permanent dataset;
