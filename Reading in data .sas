@@ -22,6 +22,23 @@ A=Age B=name C=Hobby
 *Step 5. Always remember to finish with run and the omnipresent semicolon;
 run;
 
+*NB*
+*SAS is not a case senstive software however, that only applies to numerics but the string values are in fact case senstive. "JOHN" 
+*and "John" are different. 
+data demo1;
+Var1="JOHN";
+Var2="John";
+run;
+
+*The length function is used in creating exact storage for string variables.
+*Syntax
+*length variable_name $ size-you-wish
+
+data demo1;
+length Var1 $ 4;
+Var1="Johno";
+run;
+*Since we have specified the length of the variable to be strictly 4, the record will show John in stead of Johno 
 *---------------------------------------------------------------------------------------------------------------------------------------;
 
 * external file;
