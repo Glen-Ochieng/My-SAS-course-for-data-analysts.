@@ -23,8 +23,8 @@ A=Age B=name C=Hobby
 run;
 
 *NB*
-*SAS is not a case senstive software however, that only applies to numerics but the string values are in fact case senstive. "JOHN" 
-*and "John" are different. 
+*SAS is not a case senstive software however, that only applies to variables but the variable values are in fact case senstive. "JOHN" 
+*and "John" are different but VAR1 and var1 are the same. 
 data demo1;
 Var1="JOHN";
 Var2="John";
