@@ -39,5 +39,7 @@ thus 2 ** 3 =8
 
 In place of the operators, we could use their designated functions
 a=sum(2,3)
+
 b=min(2,3)
+
 c=mean(2,3)
