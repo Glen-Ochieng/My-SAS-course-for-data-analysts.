@@ -98,6 +98,15 @@ run;
 
 *Now, the last sentence in the log pane before Note(s) will read "Find Joe in NameProper";
 
+*In more practical cases, the name Joe and joe mostly mean the same observation and the differnce could be caused by typographical errors, therefore a combination of functions can mitigate for this.*/
+
+data example2;
+set example1;
+Flag=find(upcase(name),"JOE");
+run;
+
+*As we have sent every name to uppercase, any Joe will be brought up as 1.;
+
 *----------------------------------------------------------------------------------------------------------------------------------------;
 
 /*Substrings
@@ -124,3 +133,12 @@ data example2;
 First_name=scan(Name,1);
 Second_name=scan(Name,2);
 run;
+
+*If , however, the words are seperated by a ubique delimiter and not space then the third arguement of the scan function becomes the delimiter in double qoutation. e.g the name  was recorded as SArah, Yu*/
+
+data example2;
+  set example1;
+First_name=scan(Name,1.",");
+Second_name=scan(Name,2.",");
+run;
+
