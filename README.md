@@ -33,6 +33,34 @@ Not be the name of pre-existing SAS terminology (such as “_character_”)
 
 For variable names, Upper/lowercase will be presented as such in output, BUT cat, Cat, and CAT would not be considered 3 separate variables in SAS.
 
+### SAS Functions
+
+Function is a pre-programmed routine that returns a value computed from one or more arguments.
+
+#### Numeric functions
+
+Character functions
+
+Numeric Functions
+
+ABS, MIN, MAX, MEAN, SUM, etc.
+
+Ignores the missing values
+
+##### Character Functions
+
+|| - concatenation
+
+STRIP - remove heading and trailing blanks
+
+FIND - search for a string, if exists, return the position of first occurance, otherwise, return 0
+
+SUBSTR(string, starting_pos, N) - extract a substring from a source string starting from the "starting_pos" for N number of characters
+
+SCAN(string, N, delimiter) - extract the Nth word from the source string (that is delimited by "delimiter")
+
+" " (a space) is considered as a string (as opposed to missing values)
+
 ## Mathematical operations
 In SAS, addition, subtraction multiplication and division are all the same i.e.(+,-,*,/) but exponentiating isn't ^ but rather a double asterix(**)
 thus 2 ** 3 =8
