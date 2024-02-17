@@ -31,5 +31,5 @@ Not be the name of pre-existing SAS terminology (such as “_character_”)
 For variable names, Upper/lowercase will be presented as such in output, BUT cat, Cat, and CAT would not be considered 3 separate variables in SAS.
 
 ## Mathematical operations
-In SAS, addition, subtraction and multiplication are all the same i.e.(+,-,*) but exponentiating isn't ^ but rather a double asterix(**)
+In SAS, addition, subtraction multiplication and division are all the same i.e.(+,-,*,/) but exponentiating isn't ^ but rather a double asterix(**)
 thus 2 ** 3 =8
