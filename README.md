@@ -36,3 +36,8 @@ For variable names, Upper/lowercase will be presented as such in output, BUT cat
 ## Mathematical operations
 In SAS, addition, subtraction multiplication and division are all the same i.e.(+,-,*,/) but exponentiating isn't ^ but rather a double asterix(**)
 thus 2 ** 3 =8
+
+In place of the operators, we could use their designated functions
+a=sum(2,3)
+b=min(2,3)
+c=mean(2,3)
