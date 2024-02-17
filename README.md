@@ -44,3 +44,7 @@ a=sum(2,3)
 b=min(2,3)
 
 c=mean(2,3)
+
+### Do loops
+
+Do loops must be finished with an end statement.
