@@ -84,3 +84,21 @@ run;
 
 * This function is case sesntive therefore "Joe" and "joe" are different and in the above case ,it will only return 1 if it is "Joe".;
 *Create a vector to store the output.;
+
+*To take it a step further, we could skip the creation of a vector and write a comment/note in the log pane.;
+data example2;
+  set example1;
+NameUpper=upcase(name);
+NameLower=lowcase(name);
+NameProper=propcase(name);
+if find(NameProper,"Joe")>0 then put "Find Joe in NameProper";
+run;
+
+*Now, the last sentence in the log pane before Note(s) will read "Find Joe in NameProper";
+
+/*Substrings
+
+Syntax
+
+Container=substr(Var,startingposition, length)*/ 
+
