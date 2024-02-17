@@ -42,3 +42,30 @@ b="Blanks";
 c= split(a)|| split(b);
 run;
 
+*Case sensitive functions;
+*upcase-makes all letters of a word capital;
+*lowcase-makes all letters of a word lowercase;
+*propcase-makes the first letter of every word capital while the rest remain small;
+
+data example1;
+	infile datalines dsd firstobs=2 obs=5;
+	informat name $20. hobby $10.;
+	input age name $ hobby $;
+datalines;
+A=Age B=Name C=Hobby
+25,joe,hoCkey
+32,sArah Yu,Running
+18,abigail,painting
+47,Elizabeth Lafrance,baseball
+A=Age B=name C=Hobby
+;
+run;
+
+data example2;
+  set example1;
+NameUpper=upcase(name);
+NameLower=lowcase(name);
+NameProper=propcase(name);
+run;
+
+
