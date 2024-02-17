@@ -32,4 +32,4 @@ For variable names, Upper/lowercase will be presented as such in output, BUT cat
 
 ## Mathematical operations
 In SAS, addition, subtraction and multiplication are all the same i.e.(+,-,*) but exponentiating isn't ^ but rather a double asterix(**)
-thus 2**3=8
+thus 2 ** 3 =8
