@@ -106,3 +106,7 @@ Syntax
 
 Container=substr(Var,startingposition, length)*/ 
 
+data example2;
+  set example1;
+Sub_Name=substr(Name,1,3);
+run;
