@@ -109,6 +109,8 @@ run;
 
 *----------------------------------------------------------------------------------------------------------------------------------------;
 
+*Extracting letters;
+
 /*Substrings
 
 Syntax
@@ -120,6 +122,7 @@ data example2;
 Sub_Name=substr(Name,1,3);
 run;
 
+*Exctracting words;
 /*You can also extract complete words from an observation that has two words. This is done using the scan fuction. 
 
 Syntax
