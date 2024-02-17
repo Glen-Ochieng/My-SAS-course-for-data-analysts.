@@ -1,7 +1,7 @@
 # SAS-Notes
 
 ### Listing multiple variables
-SAS has no commas basically. A list such as Age,Sex, Gender, Weight in SAS will be written as Age Sex Gender Weight. This applies to both variables and commands.
+SAS has no commas basically. A list such as Age,Sex, Gender, Weight in SAS will be written as Age Sex Gender Weight. This applies to both variables and commands. However, when entering records under datalines or arguements in a function, commas are used.
 
 ### Missing values
 Null numerics are recorded as dots. 
@@ -38,7 +38,7 @@ In SAS, addition, subtraction multiplication and division are all the same i.e.(
 thus 2 ** 3 =8
 
 In place of the operators, we could use their designated functions
-*So far the only place where commas are used is in separating arguements in a fucntion*
+
 a=sum(2,3)
 
 b=min(2,3)
