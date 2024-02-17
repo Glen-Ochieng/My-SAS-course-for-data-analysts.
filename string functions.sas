@@ -79,7 +79,8 @@ data example2;
 NameUpper=upcase(name);
 NameLower=lowcase(name);
 NameProper=propcase(name);
-find(NameProper,"Joe");
+Flag=find(NameProper,"Joe");
 run;
 
 * This function is case sesntive therefore "Joe" and "joe" are different and in the above case ,it will only return 1 if it is "Joe".;
+*Create a vector to store the output.;
