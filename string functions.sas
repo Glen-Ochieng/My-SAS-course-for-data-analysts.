@@ -68,4 +68,18 @@ NameLower=lowcase(name);
 NameProper=propcase(name);
 run;
 
+*We can create a flag that returns 1 or 0 if the string is located in that variable or if it is not respectively using the find function;
 
+*Syntax*;
+
+*find (Var_name, "string");
+
+data example2;
+  set example1;
+NameUpper=upcase(name);
+NameLower=lowcase(name);
+NameProper=propcase(name);
+find(NameProper,"Joe");
+run;
+
+* This function is case sesntive therefore "Joe" and "joe" are different and in the above case ,it will only return 1 if it is "Joe".;
