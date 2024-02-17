@@ -1,5 +1,8 @@
 # SAS-Notes
 
+### Listing multiple variables
+SAS has no commas basically. A list such as Age,Sex, Gender, Weight in SAS will be written as Age Sex Gender Weight. This applies to both variables and commands.
+
 ### Missing values
 Null numerics are recorded as dots. 
 
