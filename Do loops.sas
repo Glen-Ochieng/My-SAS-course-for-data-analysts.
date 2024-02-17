@@ -2,20 +2,11 @@
 *Do loop (stand-alone)
 *Using counter/index;
 
-data bweight;
-set sashelp.bweight;
+data bweight2;
 sum1_100=0;
-do counter= 1 to 100 by 1;
-sum1_100=sum_100+ counter;
+do i = 1 to 100 by 1;
+sum1_100= sum1_100 + i;
 end;
-
-
-
-
-
-
-
-
 
 *If can only be followed by one then condition.This makes it very difficult, as for the same condition you have to rewrite the entire code if you want a new task to be performed;
 
