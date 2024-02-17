@@ -42,6 +42,8 @@ b="Blanks";
 c= split(a)|| split(b);
 run;
 
+*----------------------------------------------------------------------------------------------------------------------------------------;
+
 *Case sensitive functions;
 *upcase-makes all letters of a word capital;
 *lowcase-makes all letters of a word lowercase;
@@ -95,6 +97,8 @@ if find(NameProper,"Joe")>0 then put "Find Joe in NameProper";
 run;
 
 *Now, the last sentence in the log pane before Note(s) will read "Find Joe in NameProper";
+
+*----------------------------------------------------------------------------------------------------------------------------------------;
 
 /*Substrings
 
