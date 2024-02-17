@@ -110,3 +110,17 @@ data example2;
   set example1;
 Sub_Name=substr(Name,1,3);
 run;
+
+/*You can also extract complete words from an observation that has two words. This is done using the scan fuction. 
+
+Syntax
+
+First_word_only=scan(Var,1)
+Second_word_only= scan(Var,2)
+*/
+
+data example2;
+  set example1;
+First_name=scan(Name,1);
+Second_name=scan(Name,2);
+run;
