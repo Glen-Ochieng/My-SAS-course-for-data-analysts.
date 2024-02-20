@@ -76,3 +76,13 @@ c=mean(2,3)
 ### Do loops
 
 Do loops must be finished with an end statement.
+
+
+## Appending datasets hot tip
+
+
+The reason why you might have some warnings when concatenating the 3 datasets are due to the different variable lengths of the same variables in across the 3 datasets. PROC IMPORT will evaluate the maximum length of a variable when importing the data, and this may lead to different variable length. There are two solutions provided here for your reference:
+
+1) Always put the dataset with the longest variable length at first, so that the variable is initiated with that length: SET europe asia usa;
+
+2) use LENGTH statement to define variable length first to make sure it's big enough to hold all the values.
