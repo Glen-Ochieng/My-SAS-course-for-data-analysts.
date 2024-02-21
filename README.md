@@ -101,6 +101,12 @@ You can choose the delimiter that suits you best, but the most common delimiters
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/5a638d4f-fb89-4a1d-82ba-939a001a304e)
 
 
+However, you can use the LENGTH statement also to change the length of multiple variables at once.
+
+Suppose you have a dataset with two columns, namely FirstName and LastName. To change the length of both columns to 25 characters, you use the following code.
+
+    LENGTH FirstName LastName $25;
+
 ### SAS Functions
 
 Function is a pre-programmed routine that returns a value computed from one or more arguments.
