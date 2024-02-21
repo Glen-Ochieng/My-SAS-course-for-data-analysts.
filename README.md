@@ -1,7 +1,7 @@
 # SAS-Notes
 
 ### String variable hot take
-Numbers separated by special characters are no longer numerical but rather they strings. ie. 074-53-9892 is a string variable and you should include the $ under the input or length statement 
+Numbers separated by special characters are no longer numerical but rather they strings. ie. 074-53-9892 is a string variable and you should include the $ under the input or length statement. 
 
 ### Listing multiple variables
 SAS has no commas basically. A list such as Age,Sex, Gender, Weight in SAS will be written as Age Sex Gender Weight. This applies to both variables and commands. However, when entering records under datalines or arguements in a function, commas are used.
