@@ -202,6 +202,14 @@ For example, we will add the column birthdate to our example dataset and enter t
 
 As you can see, it isn’t necessary to enter March 30th, 1980 as “30MAR1980″d. You directly enter 30MAR1980 in the DATALINES statement.
 
+### Checking the details of your variables
+Use the PROC CONTENTS statement
+
+	proc contents data=work.employees;
+	run;
+ 
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/7946c373-2b4c-492b-b5d9-132112a53e93)
+
 ### SAS Functions
 
 Function is a pre-programmed routine that returns a value computed from one or more arguments.
