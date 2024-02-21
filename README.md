@@ -263,3 +263,12 @@ The reason why you might have some warnings when concatenating the 3 datasets ar
 1) Always put the dataset with the longest variable length at first, so that the variable is initiated with that length: SET europe asia usa;
 
 2) use LENGTH statement to define variable length first to make sure it's big enough to hold all the values.
+
+
+## Transposition
+This is what is meant by transposing a dataset-changing from long to wide format.
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/7a181794-0b24-4734-ad6a-9d94c391a38a)
+
+
+
