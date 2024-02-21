@@ -149,7 +149,7 @@ While writing the variables in the input statement follow them up by the number 
 	data finance;
  	input Id $1-12 Name 13-37 Salary;
 
-In this case the first 12 characters will automatically be put into the iD column, the 13th to the 37th characters will be put into the name column and the 38 th to n will be put into the Salary column. This method though works if variables are of similar length or about similar length where by you can add a few spaces to occuppy the remaining character slots to match up to the fixed number i.e if the  one id is 23 characters long in stead of 25 you can add two white spaces to get it to 25.
+In this case the first 12 characters will automatically be put into the iD column,(the 12th will act like the separator: you can chose it to be a blank space or a comma etc.) the 13th to the 37th characters will be put into the name column and the 38 th to n will be put into the Salary column. This method though works if variables are of similar length or about similar length where by you can add a few spaces to occuppy the remaining character slots to match up to the fixed number i.e if the  one id is 23 characters long in stead of 25 you can add two white spaces to get it to 25.
 
 *The advantage of this method is it allows you to use different delimiters as the delimiters will not be deifined as seperators but rather characters.* 
 
