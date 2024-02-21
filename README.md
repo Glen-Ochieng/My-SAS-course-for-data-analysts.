@@ -33,6 +33,59 @@ Not be the name of pre-existing SAS terminology (such as “_character_”)
 
 For variable names, Upper/lowercase will be presented as such in output, BUT cat, Cat, and CAT would not be considered 3 separate variables in SAS.
 
+### How to Deal with Whitespace and Blanks
+Until now, all our input variables were values without whitespaces (blanks). However, it might happen that the values in the DATALINES statement contain blanks.
+
+In the examples above, the employee column contains the surname of the employee. In the code below, we try to change the value of the employee column such that it contains the first name and the surname, for example John Smith or Mike Williams.
+
+data work.employees;	
+    length employee $25;
+    input employee $ salary birthdate date9.;
+    monthly_salary = round(salary / 12, 1);
+    age = intck("year", birthdate, today(), "c");
+    format salary monthly_salary dollar12.2 birthdate date9.;
+    datalines;
+John Smith 40000 30MAR1980
+Mike Williams 35000 05SEP1994
+Marta Jones 38000 15FEB1988
+Javi Hernandez 38500 08DEC1991
+;
+run;
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/49663b76-5464-4c84-a9d1-cca48ce9c019)
+
+The result of the code above is a table with missing values and notes in the SAS log (Note: Invalid data for X in line Y).
+The cause of this problem is the way how SAS reads and processes the values after the DATALINES statement. As an example we use the following line of values.
+
+*When SAS processes a line of values, it assumes that each blank indicates the beginning of the value of the next input variable. So, in our example, SAS copies the value John to the column employee. This isn’t a problem since John is a character value, just like the employee column (defined in the INPUT statement). Then, SAS tries to copy the value Smith to the salary column. This is a problem because SAS expects a numeric value, but Smith is a character value. Therefore, the salary column remains empty and SAS writes a note to the log. SAS continues processing the remaining values, but similar problems occur.*
+
+To avoid this problem and to be able to enter values that contain blanks, we need to change the delimiter. By default, the value that separates the value of each input variable (i.e., the delimiter) is a blank. We can change this default behavior with the INFILE statement.
+
+The INFILE statement consists of three parts and is the first statement after the DATA statement:
+
+The INFILE keyword.
+The DATALINES keyword to indicate that you enter raw data manually.
+The DLM= option to define the delimiter and a semicolon. (DLM is an abbreviation of delimiter.)
+You can choose the delimiter that suits you best, but the most common delimiters are a comma, a semicolon, or a tab. In the example below, we use the comma as a delimiter.
+
+data work.employees;
+    infile datalines dlm=',' dsd;	
+    length employee $25;
+    input employee $ salary birthdate :date9.;
+    monthly_salary = round(salary / 12, 1);
+    age = intck("year", birthdate, today(), "c");
+    format salary monthly_salary dollar12.2 birthdate date9.;
+    datalines;
+John Smith, 40000, 30MAR1980
+Mike Williams, 35000, 05SEP1994
+Marta Jones, 38000, 15FEB1988
+Javi Hernandez, 38500, 08DEC1991
+;
+run;
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/5a638d4f-fb89-4a1d-82ba-939a001a304e)
+
+
 ### SAS Functions
 
 Function is a pre-programmed routine that returns a value computed from one or more arguments.
