@@ -38,13 +38,20 @@ Until now, all our input variables were values without whitespaces (blanks). How
 
 In the examples above, the employee column contains the surname of the employee. In the code below, we try to change the value of the employee column such that it contains the first name and the surname, for example John Smith or Mike Williams.
 
-data work.employees;	
+data work.employees;
+
     length employee $25;
+    
     input employee $ salary birthdate date9.;
+    
     monthly_salary = round(salary / 12, 1);
+    
     age = intck("year", birthdate, today(), "c");
+    
     format salary monthly_salary dollar12.2 birthdate date9.;
+    
     datalines;
+    
 John Smith 40000 30MAR1980
 Mike Williams 35000 05SEP1994
 Marta Jones 38000 15FEB1988
