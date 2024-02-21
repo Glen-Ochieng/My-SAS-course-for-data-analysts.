@@ -157,5 +157,44 @@ merge company finance;
 	by Name;
 run;
 
+/* Additionally, you can perorm a left join(everything on the first dataset plus additional columns from second dataset) or a right join (everything on the second dataset plus additional columns from first dataset) using the in option.
+
+The IN= option tells SAS to create a flag that has either the value 0 or 1. If the observation does not come from the dataset, then the flag returns 0. If the observation comes from the data set, then the flag returns 1.X and Y are temporary variables that hold these flags then using the if statement as a filter. If we wanted we could, create permanent variables indicating these flags in the dataset by adding codes below before the run command: 
+name1=x; 
+name2=y;
+
+Again, you must remember to sort the datasets first by the common variable.*/
+
+proc sort
+data = company;
+by Name;
+run;
+
+proc sort
+data = finance;
+by Name;
+run;
 
 
+*left join
+
+data left_merged;
+merge company(in= x) finance(in=y);
+by Name;
+if x;
+run;
+
+data right_merged;
+merge company(in= x) finance(in=y);
+by Name;
+if y;
+run;
+
+*Adding the flag variables
+
+data merged_dataset;
+merge company(in=x) finance(in=y);
+	by Name;
+ right_flag=x;
+ left_flag= y;
+run;
