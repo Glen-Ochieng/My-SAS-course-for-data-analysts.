@@ -27,3 +27,9 @@ run;
 proc sort data=A;
  by ID ;
  run;
+ 
+proc transpose data= A out=trans_A;
+by id;
+id Product;
+var Sales;
+run; 
