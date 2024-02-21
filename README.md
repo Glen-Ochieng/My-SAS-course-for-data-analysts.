@@ -152,9 +152,25 @@ While writing the variables in the input statement follow them up by the number 
 	data finance;
  	input Id $1-12 Name 13-37 Salary;
 
-In this case the first 12 characters will automatically be put into the iD column,(the 12th will act like the separator: you can chose it to be a blank space or a comma etc.) the 13th to the 37th characters will be put into the name column and the 38 th to n will be put into the Salary column. This method though works if variables are of similar length or about similar length where by you can add a few spaces to occuppy the remaining character slots to match up to the fixed number i.e if the  one id is 23 characters long in stead of 25 you can add two white spaces to get it to 25.
+In this case the first 12 characters will automatically be put into the iD column,(the 12th will act like the separator: you can chose it to be a blank space,a comma, tab(be careful with Tab , despite it moving the same distance as three spaces it does still count as a single character space) etc.) the 13th to the 37th characters will be put into the name column and the 38 th to n will be put into the Salary column. This method though works if variables are of similar length or about similar length where by you can add a few spaces to occuppy the remaining character slots to match up to the fixed number i.e if the  one id is 23 characters long in stead of 25 you can add two white spaces to get it to 25. To do this method, it is advisable to write the datalines and observations first then count to see which is the longest and work around that.
 
 *The advantage of this method is it allows you to use different delimiters as the delimiters will not be deifined as seperators but rather characters.* 
+
+	data finance;
+	input IdNumber$ 1-11 Name$ 13-37 Salary;
+	lines;	
+	074-53-9892 Vincent, Martina         35000
+	776-84-5391 Phillipon, Marie-Odile   29750
+	929-75-0218 Gunter, Thomas           27500
+	029-46-9261 Rudelich, Herbert        35000	
+	446-93-2122 Harbinger, Nicholas      33900
+	228-88-9649 Benito, Gisela           28000
+	442-21-8075 Sirignano, Emily         5000
+	;
+	run; 
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/047c1638-3b49-4f6e-b697-ae451fc4c9a0)
+
 
 ### How to Enter Date Variables
 Besides character and numeric variables, SAS provides date variables.
