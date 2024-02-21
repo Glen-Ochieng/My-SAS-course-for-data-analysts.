@@ -61,7 +61,7 @@ If you want to apply a format to your input variables, you need to place the FOR
     ;
     run;
 
-    ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/2266ccd1-b2a5-4dfe-b13f-871df1a8e120)
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/2266ccd1-b2a5-4dfe-b13f-871df1a8e120)
 
 So, if you have two columns (for example, salary and bonus) and you want to apply the DOLLAR12.2 format to both of them, then you need the following FORMAT statement:
 
