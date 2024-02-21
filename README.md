@@ -33,6 +33,41 @@ Not be the name of pre-existing SAS terminology (such as “_character_”)
 
 For variable names, Upper/lowercase will be presented as such in output, BUT cat, Cat, and CAT would not be considered 3 separate variables in SAS.
 
+### How to Change the Format of Input Variables
+Another frequently asked question about creating a dataset manually is how to format the input variables.
+
+By default, SAS uses the BESTw. format for numeric variables and the $w. format for character variables. You can modify the default formats with the FORMAT statement.
+
+The FORMAT statement consists of 3 parts, namely:
+
+1.The FORMAT keyword.
+2.The name of the variable to which you want to apply the format.
+3.The format you want to apply and a semicolon.
+So, for example, if you want to apply the DOLLAR12.2 format to the salary variable you need the following statement:
+
+    FORMAT salary DOLLAR12.2;
+    
+If you want to apply a format to your input variables, you need to place the FORMAT statement after the INPUT statement. So, for example:
+
+    data work.employees;	
+    length employee $25;
+    input employee $ salary;
+    format salary dollar12.2;
+    datalines;
+    Smith 40000
+    Williams 35000
+    Jones 38000
+    Hernandez 38500
+    ;
+    run;
+
+    ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/2266ccd1-b2a5-4dfe-b13f-871df1a8e120)
+
+So, if you have two columns (for example, salary and bonus) and you want to apply the DOLLAR12.2 format to both of them, then you need the following FORMAT statement:
+
+    FORMAT salary bonus DOLLAR12.2;
+
+    
 ### How to Deal with Whitespace and Blanks
 Until now, all our input variables were values without whitespaces (blanks). However, it might happen that the values in the DATALINES statement contain blanks.
 
@@ -106,6 +141,36 @@ However, you can use the LENGTH statement also to change the length of multiple 
 Suppose you have a dataset with two columns, namely FirstName and LastName. To change the length of both columns to 25 characters, you use the following code.
 
     LENGTH FirstName LastName $25;
+
+### How to Enter Date Variables
+Besides character and numeric variables, SAS provides date variables.
+A SAS date variable is stored as the number of days between January 1st, 1960, and the given date. So, how do you enter date variables when you create a SAS dataset manually?
+
+To enter date values after the DATALINES statement you need to do two things:
+
+1.In the INPUT statement, you need to provide the name of the variable (for example my_date) followed by the format of the values after the DATALINES statement. For example, if you enter the value 31AUG2020, then you need INPUT my_date DATE9. as INPUT statement.
+
+2.You need a FORMAT statement to make the date value interpretable for humans. Otherwise, SAS will show the number of days between the entered date and January 1st, 1960 in the output dataset.
+
+For example, we will add the column birthdate to our example dataset and enter the values in the DATE9. format.
+
+    data work.employees;	
+	length employee $25;
+	input employee $ salary birthdate date9.;
+	format salary dollar12.2 birthdate date9.;
+	datalines;
+    Smith 40000 30MAR1980
+    Williams 35000 05SEP1994
+    Jones 38000 15FEB1988
+    Hernandez 38500 08DEC1991
+    ;
+    run;
+
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/eee7beb6-d3bb-41cb-a1f0-3fd1d96d64cd)
+
+
+As you can see, it isn’t necessary to enter March 30th, 1980 as “30MAR1980″d. You directly enter 30MAR1980 in the DATALINES statement.
 
 ### SAS Functions
 
