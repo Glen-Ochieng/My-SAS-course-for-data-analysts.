@@ -38,7 +38,7 @@ Until now, all our input variables were values without whitespaces (blanks). How
 
 In the examples above, the employee column contains the surname of the employee. In the code below, we try to change the value of the employee column such that it contains the first name and the surname, for example John Smith or Mike Williams.
 
-data work.employees;
+    data work.employees;
 
     length employee $25;
     
@@ -52,12 +52,12 @@ data work.employees;
     
     datalines;
     
-John Smith 40000 30MAR1980
-Mike Williams 35000 05SEP1994
-Marta Jones 38000 15FEB1988
-Javi Hernandez 38500 08DEC1991
-;
-run;
+    John Smith 40000 30MAR1980
+    Mike Williams 35000 05SEP1994
+    Marta Jones 38000 15FEB1988
+    Javi Hernandez 38500 08DEC1991
+    ;
+    run;
 
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/49663b76-5464-4c84-a9d1-cca48ce9c019)
 
