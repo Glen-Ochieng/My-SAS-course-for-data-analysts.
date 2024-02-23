@@ -17,6 +17,8 @@ var height;
 output out=means;
 run;
 
+*The reason we opted for class in stead of BY is because BY statement requires the dataset to be sorted otherwise it returns an error.
+
 *Adding skewness, sum and kurtosis;
 proc means data =sashelp.heart sum skewness kurtosis;
 class sex;
