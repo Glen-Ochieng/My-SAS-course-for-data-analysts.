@@ -274,4 +274,8 @@ This is what is meant by transposing a dataset-changing from long to wide format
 ## PROC PRINT AND PROC CONTENTS HOT TAKE
 You can also save the outputs of these statements using the OUT=___ statements 
 
+### PROC MEANS NB
 
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/6c617d0c-7227-4862-9b92-9ad033afa59a)
+
+The N in the second column stands for number of non-missing observations.
