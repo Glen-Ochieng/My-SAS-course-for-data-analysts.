@@ -11,3 +11,16 @@ output out=new_dataset_name - saves the new output into its own dataset;
 run;
 */
 
+proc means data =sashelp.heart;
+class sex;
+var height;
+output out=means;
+run;
+
+*Adding skewness, sum and kurtosis;
+proc means data =sashelp.heart sum skewness kurtosis;
+class sex;
+var height;
+output out=means;
+run;
+
