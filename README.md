@@ -271,4 +271,7 @@ This is what is meant by transposing a dataset-changing from long to wide format
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/7a181794-0b24-4734-ad6a-9d94c391a38a)
 
 
+## PROC PRINT AND PROC CONTENTS HOT TAKE
+You can also save the outputs of these statements using the OUT=___ statements 
+
 
