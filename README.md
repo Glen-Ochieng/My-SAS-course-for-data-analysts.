@@ -301,3 +301,6 @@ PROC UNIVARIATE - for one group(signed rank test)
 PROC NPAR1WAY - for 2 or more groups(2 groups-Wilcoxon signed rank sum ,+2-Kruswalis test)
 For more details
 https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#npar1way_toc.htm
+
+#### TO ENTER THE SAS GRAPHICAL DESIGN USER INTERFACE RUN THE BELOW CODE
+%sgdesign;
