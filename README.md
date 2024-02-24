@@ -293,5 +293,5 @@ However, to understand which of the two p-values to use. We must first start at 
 
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/ecd898cb-4271-4cbd-87f8-29a4e465b53d)
 
-In the above example the variances are not equal ; therefore we use the p-value of the satterthwaite test 0.9357
+In the above example the variances are not equal ; therefore we use the p-value of the satterthwaite test 0.9357. Since this is a high p-value, we can conclude that the means are not significantly different from each other.
 
