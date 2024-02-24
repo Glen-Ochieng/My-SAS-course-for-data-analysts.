@@ -304,3 +304,5 @@ https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.ht
 
 #### TO ENTER THE SAS ODS GRAPHICAL DESIGN USER INTERFACE RUN THE BELOW CODE
 %sgdesign;
+
+After you have set your desired applications, go to the View tab to see the code associated with your graph and paste into SAS.
