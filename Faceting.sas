@@ -9,5 +9,5 @@ proc sgpanel data=sashelp.heart noautolegend;
 title "Cholestrol distribution in Heart Study";
 panelby sex;
 histogram cholesterol;
-density cholesterol;
+density cholesterol;* adds the density curve
 run;
