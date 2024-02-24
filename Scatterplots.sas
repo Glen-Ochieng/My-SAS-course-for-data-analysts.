@@ -18,3 +18,9 @@ proc sgplot data=sashelp.heart;
 scatter x=weight y=height/group=sex ;
 run;
 
+*A more advance method is the PROC SGSCATTER which gives a scatterplot matrix
+
+proc sgscatter data=sashelp.iris;
+title 'Scatter Matrix for Iris Data';
+matrix sepallength petallength sepalwidth petalwidth/ group=species; 
+run;
