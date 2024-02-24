@@ -280,7 +280,7 @@ You can also save the outputs of these statements using the OUT=___ statements
 
 The N in the second column stands for number of non-missing observations.
 
-### TWO SAMPLE TTEST RESULTS INTERPRETATION
+### TWO SAMPLE T-TEST RESULTS INTERPRETATION
 
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/40a55f1f-35e5-4e0a-ab80-65afeda12754)
 
