@@ -279,3 +279,19 @@ You can also save the outputs of these statements using the OUT=___ statements
 ![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/6c617d0c-7227-4862-9b92-9ad033afa59a)
 
 The N in the second column stands for number of non-missing observations.
+
+### TWO SAMPLE TTEST RESULTS INTERPRETATION
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/40a55f1f-35e5-4e0a-ab80-65afeda12754)
+
+Diff(1-2) is the difference in means between the two samples/populations. The two Diff(1-2) are the results of mean1 -mean2 using two methods which are dependant on the equality of the variance(i.e. pooled/satterthwaite).
+Now, to the answer the question are the two sample means different , the answer lies in the second last table.
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/9f960e42-422a-4fd6-b05d-7734d658e466)
+
+However, to understand which of the two p-values to use. We must first start at the last table. Here we look at the p-values of the equality of variances test. If the variances are equal then we will use the p-value of the pooled in the second last table. If the variances are not equal then we will the p-value in the satterthwaite column in the second last table. 
+
+![image](https://github.com/Glen-Ochieng/SAS-Notes/assets/155974295/ecd898cb-4271-4cbd-87f8-29a4e465b53d)
+
+In the above example the variances are not equal ; therefore we use the p-value of the satterthwaite test 0.9357
+
