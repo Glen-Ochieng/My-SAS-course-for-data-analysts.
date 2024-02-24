@@ -306,3 +306,5 @@ https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.ht
 %sgdesign;
 
 After you have set your desired applications, go to the View tab to see the code associated with your graph and paste into SAS.
+
+HOWEVER, BIG DOWN SIDE THIS DOESN'T WORK IN SAS STUDIO 😩
