@@ -295,3 +295,9 @@ However, to understand which of the two p-values to use. We must first start at 
 
 In the above example the variances are not equal ; therefore we use the p-value of the satterthwaite test 0.9357. Since this is a high p-value, we can conclude that the means are not significantly different from each other.
 
+### NON PARAMETRIC ANALYSES TEST BRIEFLY 
+If the assumptions i.e normality is violated then non-parametric tests take precedent
+PROC UNIVARIATE - for one group(signed rank test)
+PROC NPAR1WAY - for 2 or more groups(2 groups-Wilcoxon signed rank sum ,+2-Kruswalis test)
+For more details
+https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#npar1way_toc.htm
